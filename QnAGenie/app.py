@@ -21,6 +21,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+async def root():
+    return {"message": "QnA Genie API is running"}
+
 @app.post("/api/")
 async def answer_question(question: str = Form(...), file: UploadFile = File(None)):
     file_content = None  # Default to None
