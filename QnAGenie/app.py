@@ -1,9 +1,5 @@
 from fastapi import FastAPI, File, Form, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-import os
-import shutil
-import tempfile
-from typing import Optional
 from utils.llm_handler import get_answer
 from io import BytesIO
 import pandas as pd
@@ -76,6 +72,7 @@ def clean_json_output(response_text):
     else:
         # If not JSON formatted, return the text as is
         return response_text
+
 
 if __name__ == "__main__":
     import uvicorn
