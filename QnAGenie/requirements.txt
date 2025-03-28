@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-multipart
+openai
+pandas
+python-dotenv
+zipfile
+pdfplumber
+pytesseract
+Pillow
+json
