@@ -85,8 +85,3 @@ def clean_json_output(response_text):
     else:
         # If not JSON formatted, return the text as is
         return response_text
-
-
-# if __name__ == "__main__":
-#     import uvicorn
-#     uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
