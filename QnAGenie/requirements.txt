@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-multipart
+openai
+pandas
+python-dotenv
+pdfplumber
+pytesseract
+Pillow
+pillow
+openai
+python-jose[cryptography]
