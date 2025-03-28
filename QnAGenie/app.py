@@ -9,6 +9,10 @@ import pytesseract
 from PIL import Image  
 import json
 import os
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Assignment Answer API")
 
@@ -27,6 +31,10 @@ async def root():
 
 @app.post("/api/")
 async def answer_question(question: str = Form(...), file: UploadFile = File(None)):
+    logger.info(f"Received question: {question}")
+    if file:
+        logger.info(f"Received file: {file.filename}")
+
     file_content = None  # Default to None
 
     if file:
