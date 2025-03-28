@@ -66,6 +66,9 @@ async def answer_question(question: str = Form(...), file: UploadFile = File(Non
             image = Image.open(BytesIO(contents))
             file_content = pytesseract.image_to_string(image)
 
+        elif file_ext == "json":
+            file_content = json.loads(contents.decode("utf-8"))
+
     # Get answer using LLM
     answer = get_answer(question, file_content)
 
