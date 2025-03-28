@@ -8,14 +8,8 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/api/",
       "dest": "app.py"
     }
-  ],
-  "env": {
-    "OPENAI_API_KEY": "@openai_api_key"
-  },
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/app.py" }
   ]
 }
